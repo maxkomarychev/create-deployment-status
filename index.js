@@ -23,6 +23,9 @@ try {
       token,
       deployment_id,
       state,
+    headers: {
+      "Accept": "application/vnd.github.flash-preview+json, application/vnd.github.ant-man-preview+json",
+    }
   }).then(response => {
     console.log('response', response)
     core.setOutput("id", response.data.id)

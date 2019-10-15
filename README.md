@@ -2,8 +2,11 @@
 
 Create deployment status
 
-# Usage
+This action is a wrapper for one of [octokit's](https://octokit.github.io/rest.js) methods.
 
+Original docs can be found here: https://octokit.github.io/rest.js/#octokit-routes-repos-create-deployment-status
+
+# Usage
 
 ```yaml
 - uses: maxkomarychev/create-deployment-status@v0.1.5
