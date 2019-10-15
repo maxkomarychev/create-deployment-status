@@ -6,7 +6,7 @@ Create deployment status
 
 
 ```yaml
-- uses: maxkomarychev/create-deployment-status@v0.1.3
+- uses: maxkomarychev/create-deployment-status@v0.1.4
   id: my_step_id
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
