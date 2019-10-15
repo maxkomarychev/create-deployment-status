@@ -9,7 +9,7 @@ Original docs can be found here: https://octokit.github.io/rest.js/#octokit-rout
 # Usage
 
 ```yaml
-- uses: maxkomarychev/create-deployment-status@v0.2.0
+- uses: maxkomarychev/create-deployment-status@v0.2.1
   id: my_step_id
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
@@ -17,5 +17,5 @@ Original docs can be found here: https://octokit.github.io/rest.js/#octokit-rout
     state: success
 - name: Print outputs
   run: |
-    echo ${{ steps.my_step_id.outputs.<%name%> }}
+    echo ${{ steps.my_step_id.outputs.id }}
 ```

@@ -1,6 +1,6 @@
 {
   "name": "create-deployment-status",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Create deployment status",
   "main": "index.js",
   "keywords": [],
