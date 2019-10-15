@@ -12,10 +12,28 @@ function parse_array(input_name) {
   return input_value.split(",");
 }
 
+function parse_boolean(input_name) {
+  const input_value = core.getInput(input_name)
+  if (!input_name) {
+    return false
+  }
+  return input_name === "true"
+}
+
+function default_parse(input_name) {
+  const input_value = core.getInput(input_name)
+  return input_value || undefined
+}
+
 try {
-  const token = core.getInput("token")
-  const deployment_id = core.getInput("deployment_id")
-  const state = core.getInput("state")
+  const token = default_parse("token");
+  const deployment_id = default_parse("deployment_id");
+  const state = default_parse("state");
+  const log_url = default_parse("log_url");
+  const description = default_parse("description");
+  const environment = default_parse("environment");
+  const environment_url = default_parse("environment_url");
+  const auto_inactive = parse_boolean("auto_inactive");
   const client = new github.GitHub(token);
   const context = github.context;
   client.repos.createDeploymentStatus({
@@ -23,6 +41,14 @@ try {
       token,
       deployment_id,
       state,
+      log_url,
+      description,
+      environment,
+      environment_url,
+      auto_inactive,
+    headers: {
+      "Accept": "application/vnd.github.flash-preview+json, application/vnd.github.ant-man-preview+json",
+    }
   }).then(response => {
     console.log('response', response)
     core.setOutput("id", response.data.id)
