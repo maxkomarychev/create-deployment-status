@@ -9,7 +9,8 @@ inputs:
     description: deployment id
     required: true
   state:
-    description: State of deployment. Currently supported: error, failure, success
+    description: "State of deployment. Currently supported: error, failure, success"
+
     required: true
 
 runs:
