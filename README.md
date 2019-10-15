@@ -6,11 +6,11 @@ Create deployment status
 
 
 ```yaml
-- uses: maxkomarychev/create-deployment-status@v0.1.4
+- uses: maxkomarychev/create-deployment-status@v0.1.5
   id: my_step_id
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
-    deployment_id: ${{ github.event.pull_request.head.ref }}
+    deployment_id: ${{ github.ref }}
     state: success
 - name: Print outputs
   run: |
