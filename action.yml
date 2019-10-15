@@ -1,0 +1,17 @@
+name: Create deployment status
+description: Create deployment status
+
+inputs:
+  token:
+    description: A token to perform API calls
+    required: true
+  deployment_id:
+    description: deployment id
+    required: true
+  state:
+    description: State of deployment. Currently supported: error, failure, success
+    required: true
+
+runs:
+  using: node12
+  main: index.js

@@ -1,0 +1,13 @@
+{
+  "name": "create-deployment-status",
+  "version": "0.1.1",
+  "description": "Create deployment status",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Max Komarychev <maxkomarychev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "1.1.3",
+    "@actions/github": "1.1.0"
+  }
+}
