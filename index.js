@@ -14,10 +14,7 @@ function parse_array(input_name) {
 
 function parse_boolean(input_name) {
   const input_value = core.getInput(input_name)
-  if (!input_name) {
-    return false
-  }
-  return input_name === "true"
+  return input_value === "true"
 }
 
 function default_parse(input_name) {
