@@ -1,5 +1,7 @@
 # Create deployment status
 
+This action is deprecated in favor of https://github.com/maxkomarychev/oction-create-deployment-status
+
 Create deployment status
 
 This action is a wrapper for one of [octokit's](https://octokit.github.io/rest.js) methods.
@@ -9,7 +11,7 @@ Original docs can be found here: https://octokit.github.io/rest.js/#octokit-rout
 # Quick start
 
 ```yaml
-- uses: maxkomarychev/create-deployment-status@v0.5.1
+- uses: maxkomarychev/create-deployment-status@v0.5.2
   id: my_step_id
   with:
     token: ${{ secrets.GITHUB_TOKEN }}

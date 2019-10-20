@@ -1,6 +1,8 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
 
+core.warning("This action is deprecated in favor of https://github.com/maxkomarychev/oction-create-deployment-status")
+
 function parse_array(input_name) {
   const input_value = core.getInput(input_name)
   if (input_value === "") {
